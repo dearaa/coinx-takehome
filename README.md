@@ -29,10 +29,9 @@ _raw_tokens_
  <br> ● PK: token_id 
  <br> ● FK: -
 
-
-The data is synthetic and for demonstration purposes only.
-
 ---
+## Data lineage and ERD
+![alt text](https://github.com/dearaa/coinx-takehome/blob/main/ERD.png?raw=true)
 
 ## ⚙️ Methodology
 ### 1. Data Cleaning
