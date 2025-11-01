@@ -171,13 +171,10 @@ b. How does retention differ by region and token category?
 
 #### 3.3 Data Reliability & Compliance
 a. Detect anomalies (duplicate trades, suspiciously high-value transfers).
-- Duplicate check: Identify trades with same user_id, token_id, timestamp, and amount.
-- High-value anomaly detection: Use statistical thresholds (e.g., z-score > 3 or top 0.5% percentile) on trade_value and transfer_value.
+→ Duplicate check: Identify trades with same user_id, token_id, timestamp, and amount.
 
 b. Ensure trusted dashboards and data quality.
-- Apply data validation rules before loading data to BI tools.
-- Build audit tables tracking rejected or flagged records.
-- Set up alerts for sudden spikes or data inconsistencies.
+→ Apply data validation rules before loading data to BI tools.
 
 **SUMMARY**
 
