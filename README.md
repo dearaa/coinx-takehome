@@ -45,6 +45,8 @@ _raw_tokens_
 <br> c. Analytical views: _pareto_trade_buy_, _pareto_trade_sell_, _pareto_p2p_, and _trade_value_per_user_
 
 <br> ![alt text](https://github.com/dearaa/coinx-takehome/blob/main/Environment%20Setup.png?raw=true)
+Link: https://console.cloud.google.com/bigquery?ws=!1m4!1m3!3m2!1sthird-pad-476804-p7!2scoinx 
+
 
 - Data Standardization: Check & convert all data types to correct formats (e.g., string → integer/float/date). Ensure all timestamps are in UTC.
 - Data Integration: Join all raw tables using foreign keys (user_id, token_id) to build unified fact tables:
