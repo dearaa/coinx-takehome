@@ -30,7 +30,7 @@ _raw_tokens_
  <br> ● FK: -
 
 ---
-## Data lineage and ERD
+## ERD Dataset
 ![alt text](https://github.com/dearaa/coinx-takehome/blob/main/ERD.png?raw=true)
 
 ## ⚙️ Methodology
