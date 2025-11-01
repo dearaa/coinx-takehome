@@ -122,14 +122,56 @@ _Example_:
 
 #### 3.2 User Retention & Cross-Product Usage
 a. Do users who start with P2P transfers eventually trade, or churn?
-- Identify cohorts of users whose first action is P2P transfer.
-- Track transition rate to fact_trades within N days (e.g., 30, 60, 90 days).
-- Measure churn rate for those who never trade.
+- See if P2P users later become traders.
+
+| Metric                            | Value   |
+| --------------------------------  | --------|
+| **Total P2P Users**               | 49      |
+| **Total Trade Users**             | 29      |
+| **P2P Users Who Later Traded**    | 29      |
+| **Conversion Rate**               | 59.18%  |
+
+**SUMMARY**
+* Strong cross-product conversion
+→ Around 6 out of 10 P2P users went on to perform trading activities — showing that P2P can be an effective entry point for trading adoption.
+
+* High overlap between P2P and Trade users
+→ All trading users have already engaged in P2P first, meaning P2P is the primary gateway into the ecosystem.
+
+* Retention potential through P2P funnel
+→ Since conversion is strong, improving P2P user retention and engagement (e.g., via reward programs or trading tutorials) could directly increase trading volume and active traders.
+
+* Next exploration:
+Segment by region to see where conversion is strongest (e.g., SEA vs. Europe).
+Check token preference overlap — which tokens users trade after doing P2P (e.g., stablecoins vs. memecoins).
+Identify the 40.82% who churned after P2P — what behavior or token use differentiates them?
 
 b. How does retention differ by region and token category?
 - Use raw_users.region and raw_tokens.category.
-- Compute monthly active users (MAU) and returning users.
-- Compare retention curve by region and category.
+- Create cohort retention breakdown by token region.
+
+<br> ![alt text](https://github.com/dearaa/coinx-takehome/blob/main/cohort_retention.png?raw=true)
+
+
+**SUMMARY**
+
+   * Denpasar and Medan show strong M1 retention (100–125%), while Bandung, Jakarta, and Makassar drop below 50%.
+     → User onboarding effectiveness differs sharply across regions.
+   * By month 3–4, most regions fall below 50%.
+     → Engagement beyond the first two months is weak — users lose interest quickly.
+   * **Layer-1 tokens** sustain better long term retention.
+   * **Meme Coins** are volatile, often spike early, then crash.
+     → Product teams should tailor campaigns by token type.
+   * **Medan** users remain consistently active (M3 > 80%).
+   * **Jakarta** shows outliers (300%) → possible data anomaly or double counting.
+
+---Strategic Takeaways
+
+* Strengthen **post-onboarding engagement** within 60 days.
+* Use **Layer-1 tokens** as anchors for long-term user activity.
+* Investigate **Jakarta data quality** and **why Medan retains better** — replicate what works.
+* Regionalized retention programs could significantly improve overall user stickiness.
+
 
 #### 3.3 Data Reliability & Compliance
 a. Detect anomalies (duplicate trades, suspiciously high-value transfers).
@@ -141,4 +183,16 @@ b. Ensure trusted dashboards and data quality.
 - Build audit tables tracking rejected or flagged records.
 - Set up alerts for sudden spikes or data inconsistencies.
 
+**SUMMARY**
+
+**Data completeness:**
+No missing tokens, users, or invalid trade values — indicating strong data integrity in the source system.
+
+**Anomaly detection:**
+
+* **Duplicate trades:** 3 duplicate `trade_id` found (TR0182, TR0072, TR0239), suggesting possible double-counting or system reprocessing errors.
+* **High-value anomalies:** A few users (notably **U029** and **U032**) recorded abnormally large transfers in XRP and ADA, exceeding 10× the average transaction value — potential outliers requiring compliance review.
+
+**Takeaway:**
+Data is generally reliable, but these anomalies highlight the need for **automated data quality checks** (duplicate filters, high-value alerting) before building dashboards or regulatory reports to ensure decision-making accuracy.
 
