@@ -141,10 +141,6 @@ a. Do users who start with P2P transfers eventually trade, or churn?
 * Retention potential through P2P funnel
 → Since conversion is strong, improving P2P user retention and engagement (e.g., via reward programs or trading tutorials) could directly increase trading volume and active traders.
 
-* Next exploration:
-Segment by region to see where conversion is strongest (e.g., SEA vs. Europe).
-Check token preference overlap — which tokens users trade after doing P2P (e.g., stablecoins vs. memecoins).
-Identify the 40.82% who churned after P2P — what behavior or token use differentiates them?
 
 b. How does retention differ by region and token category?
 - Use raw_users.region and raw_tokens.category.
